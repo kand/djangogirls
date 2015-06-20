@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+<html>
+  <head>
+    <title>THE BLOG</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

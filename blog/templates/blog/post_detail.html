@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+  <h1>THE BLOG > {{ post.title }}</h1>
+  <div class="post">
+      <div>By: {{ post.author.username }}</div>
+      <div>Created: {{ post.created_date }}, Published: {{ post.published_date }}</div>
+      <div>{{ post.text | linebreaks }}</div>
+    </div>
+  </div>
+{% endblock %}

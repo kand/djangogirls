@@ -1,17 +1,19 @@
-<html>
-  <head>
-    <title>THE BLOG</title>
-  </head>
-  <body>
-    <div class="posts">
-      {% for post in posts %}
-        <div id="post{{ post.id }}">
-          <h3>{{ post.title }}</h3>
-          <div>By: {{ post.author.username }}</div>
-          <div>Created: {{ post.created_date }}, Published: {{ post.published_date }}</div>
-          <div>{{ post.text | linebreaks }}</div>
-        </div>
-      {% endfor %}
-    </div>
-  </body>
-</html>
+{% extends "blog/base.html" %}
+
+{% block content %}
+  <h1>THE BLOG</h1>
+  <div class="posts">
+    {% for post in posts %}
+      <div id="post{{ post.id }}">
+        <h3>
+          <a href="{% url 'blog.views.post_detail' pk=post.pk %}">
+            {{ post.title }}
+          </a>
+        </h3>
+        <div>By: {{ post.author.username }}</div>
+        <div>Created: {{ post.created_date }}, Published: {{ post.published_date }}</div>
+        <div>{{ post.text | linebreaks }}</div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

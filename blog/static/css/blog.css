@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    background-color: #00f;
+    color: #0f0;
+    font-family: 'Permanent Marker';
+    padding: 20px;
+}
+
+h3 {
+    color: #f00;
+    font-family: 'Lobster';
+}
+
+.posts {
+    padding: 0 15px;
+}
+
+.post {
+    padding: 0 15px;
+}
